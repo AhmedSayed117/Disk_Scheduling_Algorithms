@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2021.1.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Disk_Scheduling_Algorithms.dir/objects.a
+F:\x86_64-8.1.0-release-posix-seh-rt_v6-rev0\mingw64\bin\ar.exe cr CMakeFiles\Disk_Scheduling_Algorithms.dir/objects.a @CMakeFiles\Disk_Scheduling_Algorithms.dir\objects1.rsp
+F:\x86_64-8.1.0-release-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\Disk_Scheduling_Algorithms.dir/objects.a -Wl,--no-whole-archive -o Disk_Scheduling_Algorithms.exe -Wl,--out-implib,libDisk_Scheduling_Algorithms.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Disk_Scheduling_Algorithms.dir\linklibs.rsp
