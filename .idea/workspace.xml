@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89db5f43-c1ac-42b9-9961-5d5ddb641518" name="Changes" comment="Final + Remaining FCFS,SSTF">
-      <change afterPath="$PROJECT_DIR$/barChart3D.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jar_files/jcommon-1.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jar_files/jfreechart-1.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/GUI$BarChart3D.class" afterDir="false" />
+    <list default="true" id="89db5f43-c1ac-42b9-9961-5d5ddb641518" name="Changes" comment="Final GUI + Remaining FCFS,SSTF">
+      <change afterPath="$PROJECT_DIR$/Algorithms.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/GUI$DataInformation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/que.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Disk_Scheduling_Algorithms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Disk_Scheduling_Algorithms.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jar_files/jcommon-1.0.24.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jar_files/jfreechart-1.5.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/barChart3D.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/GUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/GUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/GUI$BarChart3D.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/GUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650474367979</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Final GUI + Remaining FCFS,SSTF">
+      <created>1650477761733</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1650477761733</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +165,7 @@
     <MESSAGE value="GUI" />
     <MESSAGE value="GUI Initial Finished Still JFreeLibraryChart" />
     <MESSAGE value="Final + Remaining FCFS,SSTF" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final + Remaining FCFS,SSTF" />
+    <MESSAGE value="Final GUI + Remaining FCFS,SSTF" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final GUI + Remaining FCFS,SSTF" />
   </component>
 </project>

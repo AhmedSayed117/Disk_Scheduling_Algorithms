@@ -104,9 +104,7 @@ public class GUI extends JFrame{
     private JFormattedTextField EndC;
     private JTextArea Que;
 
-
-    public GUI(String title)
-    {
+    public GUI(String title) {
         super(title);
         Que.setRows(10);
 
@@ -130,136 +128,142 @@ public class GUI extends JFrame{
                 Map<String,Integer> AllMovement = new HashMap<>();
                 Text = Que.getText();
                 String[] s = Text.split("\n");
-                for (JRadioButton Radio : Algorithms)
-                {
-                    ArrayList<Integer> queue = new ArrayList<>();
-                    for (String value : s)
-                        queue.add(Integer.parseInt(value));
+                if (!StartC.getText().equals("") && !EndC.getText().equals("") && !Text.equals("")){
+                    for (JRadioButton Radio : Algorithms) {
+                        ArrayList<Integer> queue = new ArrayList<>();
+                        for (String value : s)
+                            queue.add(Integer.parseInt(value));
 
-                    if (Radio.isSelected())
-                    {
-                        switch (Radio.getText())
+                        if (Radio.isSelected())
                         {
-                            case "C-LOOK":
+                            switch (Radio.getText())
                             {
-                                if (!FieldC_Look.getText().equals(""))
+                                case "C-LOOK":
                                 {
-                                    C_LOOK obj;
-                                    if (CheckC_Look.getModel().getSelectedItem() == "Right")
+                                    if (!FieldC_Look.getText().equals(""))
                                     {
-                                        obj = new C_LOOK(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), Integer.parseInt(FieldC_Look.getText()), true, queue);
+                                        C_LOOK obj;
+                                        if (CheckC_Look.getModel().getSelectedItem() == "Right")
+                                        {
+                                            obj = new C_LOOK(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), Integer.parseInt(FieldC_Look.getText()), true, queue);
+                                        }
+                                        else
+                                        {
+                                            obj = new C_LOOK(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), Integer.parseInt(FieldC_Look.getText()), false, queue);
+                                        }
+                                        obj.Calculate();
+                                        System.out.println("C-LOOK Algorithm");
+                                        obj.display();
+
+                                        DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "C-LOOK Algorithm");
+                                        chart.pack();
+                                        RefineryUtilities.centerFrameOnScreen(chart);
+                                        chart.setVisible(true);
+                                        AllMovement.put("C-LOOK",obj.TotalMovement);
                                     }
-                                    else
+                                    break;
+                                }
+                                case "LOOK":
+                                {
+                                    if (!FieldLook.getText().equals(""))
                                     {
-                                        obj = new C_LOOK(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), Integer.parseInt(FieldC_Look.getText()), false, queue);
+                                        LOOK obj;
+                                        if (CheckLook.getModel().getSelectedItem() == "Right")
+                                        {
+                                            obj = new LOOK(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), Integer.parseInt(FieldLook.getText()), true, queue);
+                                        }
+                                        else
+                                        {
+                                            obj = new LOOK(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), Integer.parseInt(FieldLook.getText()), false, queue);
+                                        }
+                                        obj.Calculate();
+                                        System.out.println("LOOK Algorithm");
+                                        obj.display();
+
+                                        DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "LOOK Algorithm");
+                                        chart.pack();
+                                        RefineryUtilities.centerFrameOnScreen(chart);
+                                        chart.setVisible(true);
+
+                                        AllMovement.put("LOOK",obj.TotalMovement);
                                     }
+                                    break;
+                                }
+                                case "Scan":
+                                {
+                                    if (!FieldScan.getText().equals(""))
+                                    {
+                                        SCAN obj;
+                                        if (CheckScan.getModel().getSelectedItem() == "Right")
+                                        {
+                                            obj = new SCAN(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), Integer.parseInt(FieldScan.getText()), true, queue);
+                                        }
+                                        else
+                                        {
+                                            obj = new SCAN(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), Integer.parseInt(FieldScan.getText()), false, queue);
+                                        }
+                                        obj.Calculate();
+                                        System.out.println("Scan Algorithm");
+                                        obj.display();
+
+                                        DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "Scan Algorithm");
+                                        chart.pack();
+                                        RefineryUtilities.centerFrameOnScreen(chart);
+                                        chart.setVisible(true);
+                                        AllMovement.put("Scan",obj.TotalMovement);
+                                    }
+                                    break;
+                                }
+                                case "C-Scan":
+                                {
+                                    if (!FieldC_Scan.getText().equals(""))
+                                    {
+                                        C_SCAN obj;
+                                        if (CheckC_Scan.getModel().getSelectedItem() == "Right")
+                                        {
+                                            obj = new C_SCAN(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), Integer.parseInt(FieldC_Scan.getText()), true, queue);
+                                        }
+                                        else
+                                        {
+                                            obj = new C_SCAN(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), Integer.parseInt(FieldC_Scan.getText()), false, queue);
+                                        }
+                                        obj.Calculate();
+                                        System.out.println("C-Scan Algorithm");
+                                        obj.display();
+
+                                        DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "C-Scan Algorithm");
+                                        chart.pack();
+                                        RefineryUtilities.centerFrameOnScreen(chart);
+                                        chart.setVisible(true);
+                                        AllMovement.put("C-Scan",obj.TotalMovement);
+                                    }
+                                    break;
+                                }
+                                case "FCFS":
+                                {
+                                    break;
+                                }
+                                case "SSTF":
+                                {
+                                    break;
+                                }
+                                case "OPTIMIZED":
+                                {
+                                    OPTIMIZED obj = new OPTIMIZED(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), queue);
                                     obj.Calculate();
+                                    System.out.println("OPTIMIZED Algorithm");
                                     obj.display();
 
-                                    DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "C-LOOK Algorithm");
+                                    DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "OPTIMIZED Algorithm");
                                     chart.pack();
                                     RefineryUtilities.centerFrameOnScreen(chart);
                                     chart.setVisible(true);
-                                    AllMovement.put("C-LOOK",obj.TotalMovement);
+                                    AllMovement.put("OPTIMIZED",obj.TotalMovement);
+                                    break;
                                 }
-                                break;
+                                default:
+                                    break;
                             }
-                            case "LOOK":
-                            {
-                                if (!FieldLook.getText().equals(""))
-                                {
-                                    LOOK obj;
-                                    if (CheckLook.getModel().getSelectedItem() == "Right")
-                                    {
-                                        obj = new LOOK(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), Integer.parseInt(FieldLook.getText()), true, queue);
-                                    }
-                                    else
-                                    {
-                                        obj = new LOOK(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), Integer.parseInt(FieldLook.getText()), false, queue);
-                                    }
-                                    obj.Calculate();
-                                    obj.display();
-
-                                    DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "LOOK Algorithm");
-                                    chart.pack();
-                                    RefineryUtilities.centerFrameOnScreen(chart);
-                                    chart.setVisible(true);
-
-                                    AllMovement.put("LOOK",obj.TotalMovement);
-                                }
-                                break;
-                            }
-                            case "Scan":
-                            {
-                                if (!FieldScan.getText().equals(""))
-                                {
-                                    SCAN obj;
-                                    if (CheckScan.getModel().getSelectedItem() == "Right")
-                                    {
-                                        obj = new SCAN(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), Integer.parseInt(FieldScan.getText()), true, queue);
-                                    }
-                                    else
-                                    {
-                                        obj = new SCAN(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), Integer.parseInt(FieldScan.getText()), false, queue);
-                                    }
-                                    obj.Calculate();
-                                    obj.display();
-
-                                    DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "Scan Algorithm");
-                                    chart.pack();
-                                    RefineryUtilities.centerFrameOnScreen(chart);
-                                    chart.setVisible(true);
-                                    AllMovement.put("Scan",obj.TotalMovement);
-                                }
-                                break;
-                            }
-                            case "C-Scan":
-                            {
-                                if (!FieldC_Scan.getText().equals(""))
-                                {
-                                    C_SCAN obj;
-                                    if (CheckC_Scan.getModel().getSelectedItem() == "Right")
-                                    {
-                                        obj = new C_SCAN(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), Integer.parseInt(FieldC_Scan.getText()), true, queue);
-                                    }
-                                    else
-                                    {
-                                        obj = new C_SCAN(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), Integer.parseInt(FieldC_Scan.getText()), false, queue);
-                                    }
-                                    obj.Calculate();
-                                    obj.display();
-
-                                    DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "C-Scan Algorithm");
-                                    chart.pack();
-                                    RefineryUtilities.centerFrameOnScreen(chart);
-                                    chart.setVisible(true);
-                                    AllMovement.put("C-Scan",obj.TotalMovement);
-                                }
-                                break;
-                            }
-                            case "FCFS":
-                            {
-                                break;
-                            }
-                            case "SSTF":
-                            {
-                                break;
-                            }
-                            case "OPTIMIZED":
-                            {
-                                OPTIMIZED obj = new OPTIMIZED(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), queue);
-                                obj.Calculate();
-                                obj.display();
-
-                                DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "OPTIMIZED Algorithm");
-                                chart.pack();
-                                RefineryUtilities.centerFrameOnScreen(chart);
-                                chart.setVisible(true);
-                                AllMovement.put("OPTIMIZED",obj.TotalMovement);
-                                break;
-                            }
-                            default:
-                                break;
                         }
                     }
                 }
@@ -271,8 +275,8 @@ public class GUI extends JFrame{
             }
         });
     }
-    public static void main(String[] args)
-    {
+
+    public static void main(String[] args) {
         JFrame Frame = new GUI("Disk Scheduling Algorithms");
         Frame.setVisible(true);
     }
