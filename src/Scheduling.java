@@ -34,5 +34,6 @@ public class Scheduling {
             System.out.print(sequence + " ");
         }
         System.out.println(">");
+        System.out.println();
     }
 }

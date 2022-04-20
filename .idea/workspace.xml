@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89db5f43-c1ac-42b9-9961-5d5ddb641518" name="Changes" comment="SCAN + Structure">
-      <change afterPath="$PROJECT_DIR$/src/OPTIMIZED.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/C_LOOK.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/C_LOOK.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/C_SCAN.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/C_SCAN.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/FCFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/FCFS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/LOOK.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/LOOK.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/SCAN.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/SCAN.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/SSTF.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/SSTF.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/Scheduling.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/Scheduling.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LOOK.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LOOK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LOOK.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SCAN.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scheduling.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scheduling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scheduling.java" afterDir="false" />
-    </list>
+    <list default="true" id="89db5f43-c1ac-42b9-9961-5d5ddb641518" name="Changes" comment="SCAN + Structure" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +34,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/jar_files/jfreechart-1.5.3.jar" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -65,6 +46,17 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Disk_Scheduling_Algorithms" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -83,6 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1650382104362</updated>
+      <workItem from="1650449086779" duration="3742000" />
     </task>
     <task id="LOCAL-00001" summary="SCAN + Structure">
       <created>1650401245976</created>
@@ -93,6 +86,9 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
