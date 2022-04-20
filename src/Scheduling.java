@@ -12,6 +12,12 @@ public class Scheduling {
         queue = q;
         sequences = new Vector<>();
     }
+    public Scheduling(int s,int e,ArrayList<Integer> q)
+    {
+        Start =s;End=e;TotalMovement=0;
+        queue = q;
+        sequences = new Vector<>();
+    }
     public Scheduling(int s,int e,int h,Boolean d,ArrayList<Integer> q)
     {
         Direction = d;
@@ -20,8 +26,8 @@ public class Scheduling {
         sequences = new Vector<>();
     }
     public void display(){
-        if (Direction) System.out.println("Direction Is Right");
-        else System.out.println("Direction Is Left");
+        //if (Direction) System.out.println("Direction Is Right");
+        //else System.out.println("Direction Is Left");
         System.out.println("Total Movement = " + TotalMovement);
         System.out.print("Sequence = < ");
         for (Integer sequence : sequences) {

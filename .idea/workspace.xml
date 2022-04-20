@@ -4,66 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89db5f43-c1ac-42b9-9961-5d5ddb641518" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Disk_Scheduling_Algorithms.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jar_files/jcommon-1.0.24.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jar_files/jfreechart-1.5.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/C_LOOK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/C_SCAN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FCFS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LOOK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SCAN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SSTF.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Scheduling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="89db5f43-c1ac-42b9-9961-5d5ddb641518" name="Changes" comment="SCAN + Structure">
+      <change afterPath="$PROJECT_DIR$/src/OPTIMIZED.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.2/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.2/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.2/CompilerIdC/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.2/CompilerIdCXX/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Disk_Scheduling_Algorithms.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Disk_Scheduling_Algorithms.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Disk_Scheduling_Algorithms.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Disk_Scheduling_Algorithms.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Disk_Scheduling_Algorithms.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Disk_Scheduling_Algorithms.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Disk_Scheduling_Algorithms.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Disk_Scheduling_Algorithms.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Disk_Scheduling_Algorithms.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Disk_Scheduling_Algorithms.dir/main.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Disk_Scheduling_Algorithms.dir/objects.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Disk_Scheduling_Algorithms.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Disk_Scheduling_Algorithms.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Disk_Scheduling_Algorithms.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Disk_Scheduling_Algorithms.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/C_LOOK.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/C_LOOK.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/C_SCAN.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/C_SCAN.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/FCFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/FCFS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/LOOK.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/LOOK.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/SCAN.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/SCAN.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/SSTF.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/SSTF.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/Scheduling.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/Scheduling.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LOOK.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LOOK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LOOK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SCAN.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scheduling.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scheduling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scheduling.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +84,14 @@
       <option name="presentableId" value="Default" />
       <updated>1650382104362</updated>
     </task>
+    <task id="LOCAL-00001" summary="SCAN + Structure">
+      <created>1650401245976</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1650401245976</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -139,5 +108,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="SCAN + Structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="SCAN + Structure" />
   </component>
 </project>
