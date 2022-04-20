@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Vector;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.ChartFactory;
@@ -10,10 +12,33 @@ import org.jfree.ui.ApplicationFrame;
 import org.jfree.ui.RefineryUtilities;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
+import java.io.*;
+import org.jfree.chart.ChartUtilities;
 
 public class GUI extends JFrame{
+    static class DataInformation {
+        public DataInformation(Map<String,Integer> m) throws IOException {
+                final DefaultCategoryDataset dataset = new DefaultCategoryDataset();
 
-    class DrawChart extends ApplicationFrame{
+                for (Map.Entry<String,Integer> newMap : m.entrySet()) {
+                    dataset.addValue(newMap.getValue(), newMap.getKey() +"("+ Integer.toString(newMap.getValue())+")", "");
+                }
+
+                JFreeChart barChart = ChartFactory.createBarChart3D(
+                        "Compare Total Movement Between Algorithms",
+                        "Algorithms",
+                        "Total Movement",
+                        dataset,
+                        PlotOrientation.VERTICAL,
+                        true, true, false);
+
+                int width = 640; /* Width of the image */
+                int height = 480; /* Height of the image */
+                File barChart3D = new File( "Algorithms.jpeg" );
+                ChartUtilities.saveChartAsJPEG( barChart3D, barChart, width, height);
+            }
+    }
+    static class DrawChart extends ApplicationFrame{
         public  Vector<Integer> vector;
         public  String Name;
 
@@ -102,6 +127,7 @@ public class GUI extends JFrame{
         CalculateButton.addActionListener(new ActionListener() {
             @Override public void actionPerformed(ActionEvent e)
             {
+                Map<String,Integer> AllMovement = new HashMap<>();
                 Text = Que.getText();
                 String[] s = Text.split("\n");
                 for (JRadioButton Radio : Algorithms)
@@ -130,10 +156,11 @@ public class GUI extends JFrame{
                                     obj.Calculate();
                                     obj.display();
 
-                                    DrawChart chart = new DrawChart("Algorithms Chart" ,obj.sequences ,"C-LOOK Algorithm");
+                                    DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "C-LOOK Algorithm");
                                     chart.pack();
                                     RefineryUtilities.centerFrameOnScreen(chart);
                                     chart.setVisible(true);
+                                    AllMovement.put("C-LOOK",obj.TotalMovement);
                                 }
                                 break;
                             }
@@ -153,10 +180,12 @@ public class GUI extends JFrame{
                                     obj.Calculate();
                                     obj.display();
 
-                                    DrawChart chart = new DrawChart("Algorithms Chart" ,obj.sequences ,"LOOK Algorithm");
+                                    DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "LOOK Algorithm");
                                     chart.pack();
                                     RefineryUtilities.centerFrameOnScreen(chart);
                                     chart.setVisible(true);
+
+                                    AllMovement.put("LOOK",obj.TotalMovement);
                                 }
                                 break;
                             }
@@ -176,10 +205,11 @@ public class GUI extends JFrame{
                                     obj.Calculate();
                                     obj.display();
 
-                                    DrawChart chart = new DrawChart("Algorithms Chart" ,obj.sequences ,"Scan Algorithm");
+                                    DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "Scan Algorithm");
                                     chart.pack();
                                     RefineryUtilities.centerFrameOnScreen(chart);
                                     chart.setVisible(true);
+                                    AllMovement.put("Scan",obj.TotalMovement);
                                 }
                                 break;
                             }
@@ -199,10 +229,11 @@ public class GUI extends JFrame{
                                     obj.Calculate();
                                     obj.display();
 
-                                    DrawChart chart = new DrawChart("Algorithms Chart" ,obj.sequences ,"C-Scan Algorithm");
+                                    DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "C-Scan Algorithm");
                                     chart.pack();
                                     RefineryUtilities.centerFrameOnScreen(chart);
                                     chart.setVisible(true);
+                                    AllMovement.put("C-Scan",obj.TotalMovement);
                                 }
                                 break;
                             }
@@ -220,10 +251,11 @@ public class GUI extends JFrame{
                                 obj.Calculate();
                                 obj.display();
 
-                                DrawChart chart = new DrawChart("Algorithms Chart" ,obj.sequences ,"OPTIMIZED Algorithm");
+                                DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "OPTIMIZED Algorithm");
                                 chart.pack();
                                 RefineryUtilities.centerFrameOnScreen(chart);
                                 chart.setVisible(true);
+                                AllMovement.put("OPTIMIZED",obj.TotalMovement);
                                 break;
                             }
                             default:
@@ -231,10 +263,14 @@ public class GUI extends JFrame{
                         }
                     }
                 }
+                try {
+                    new DataInformation(AllMovement);
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
             }
         });
     }
-
     public static void main(String[] args)
     {
         JFrame Frame = new GUI("Disk Scheduling Algorithms");

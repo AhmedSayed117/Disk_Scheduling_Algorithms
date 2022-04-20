@@ -4,13 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89db5f43-c1ac-42b9-9961-5d5ddb641518" name="Changes" comment="GUI Initial Finished Still JFreeLibraryChart">
+    <list default="true" id="89db5f43-c1ac-42b9-9961-5d5ddb641518" name="Changes" comment="Final + Remaining FCFS,SSTF">
+      <change afterPath="$PROJECT_DIR$/barChart3D.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jar_files/jcommon-1.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jar_files/jfreechart-1.0.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/GUI$BarChart3D.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Disk_Scheduling_Algorithms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Disk_Scheduling_Algorithms.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jar_files/jcommon-1.0.24.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jar_files/jfreechart-1.5.3.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/GUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/GUI$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/GUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +34,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/GUI.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="281RSB4QKqJ6UDI3vNkI5tXkNOv" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -43,7 +52,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/jar_files/jfreechart-1.0.1.jar" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -53,6 +62,9 @@
     <force-push-targets>
       <force-push-target remote-path="origin" branch="main" />
     </force-push-targets>
+  </component>
+  <component name="ReaderModeSettings">
+    <option name="enabled" value="false" />
   </component>
   <component name="RunManager" selected="Application.GUI">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
@@ -118,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650466951882</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Final + Remaining FCFS,SSTF">
+      <created>1650474367979</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1650474367979</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +160,7 @@
     <MESSAGE value="SCAN + Structure" />
     <MESSAGE value="GUI" />
     <MESSAGE value="GUI Initial Finished Still JFreeLibraryChart" />
-    <option name="LAST_COMMIT_MESSAGE" value="GUI Initial Finished Still JFreeLibraryChart" />
+    <MESSAGE value="Final + Remaining FCFS,SSTF" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final + Remaining FCFS,SSTF" />
   </component>
 </project>
