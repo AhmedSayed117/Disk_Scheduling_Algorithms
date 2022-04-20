@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class C_LOOK extends Scheduling{
-
     public C_LOOK(int start, int end, int headPointer, boolean Direction, ArrayList<Integer> queue) {
         super(start, end, headPointer,Direction,queue);//Start - End - HeadPointer
     }
@@ -75,4 +74,9 @@ public class C_LOOK extends Scheduling{
            queue.set(i,garbagevlaue);
           }
   }*/
+    
+    
+    
+    
+    
 }
