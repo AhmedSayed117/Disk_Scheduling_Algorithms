@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89db5f43-c1ac-42b9-9961-5d5ddb641518" name="Changes" comment="GUI">
+    <list default="true" id="89db5f43-c1ac-42b9-9961-5d5ddb641518" name="Changes" comment="GUI Initial Finished Still JFreeLibraryChart">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/C_LOOK.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/C_LOOK.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Disk_Scheduling_Algorithms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Disk_Scheduling_Algorithms.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/GUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/GUI$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/GUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650462482881</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="GUI Initial Finished Still JFreeLibraryChart">
+      <created>1650466951882</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1650466951882</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,20 +140,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="SCAN + Structure" />
     <MESSAGE value="GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="GUI" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/GUI.java</url>
-          <line>53</line>
-          <properties>
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="GUI Initial Finished Still JFreeLibraryChart" />
+    <option name="LAST_COMMIT_MESSAGE" value="GUI Initial Finished Still JFreeLibraryChart" />
   </component>
 </project>

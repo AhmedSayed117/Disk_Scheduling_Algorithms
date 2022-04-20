@@ -2,8 +2,57 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Vector;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.JFreeChart;
+import org.jfree.ui.ApplicationFrame;
+import org.jfree.ui.RefineryUtilities;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.category.DefaultCategoryDataset;
 
-public class GUI extends JFrame {
+public class GUI extends JFrame{
+
+    class DrawChart extends ApplicationFrame{
+        public  Vector<Integer> vector;
+        public  String Name;
+
+        public DrawChart(String applicationTitle,Vector<Integer>v,String name) {
+            super(applicationTitle);
+            setVector(v,name);
+            JFreeChart lineChart = ChartFactory.createLineChart(
+                    "",
+                    "cylinders", "",
+                    createDataset(),
+                    PlotOrientation.HORIZONTAL,
+                    true,
+                    true,
+                    false);
+
+            ChartPanel chartPanel = new ChartPanel(lineChart);
+            chartPanel.setPreferredSize(new java.awt.Dimension(560, 367));
+            setContentPane(chartPanel);
+        }
+
+        void setVector(Vector<Integer>v,String name){
+            vector = v;
+            this.Name = name;
+        }
+
+        public DefaultCategoryDataset createDataset() {
+            DefaultCategoryDataset dataset = new DefaultCategoryDataset();
+            String begin = "10";
+            for (Integer value : vector) {
+                dataset.addValue(value, Name, begin);
+                int tmp = Integer.parseInt(begin);
+                tmp += 10;
+                begin = Integer.toString(tmp);
+            }
+            return dataset;
+        }
+
+    }
+
     private JPanel MainPanel;
     public String Text;
     private JLabel FirstLabel;
@@ -30,19 +79,20 @@ public class GUI extends JFrame {
     private JFormattedTextField EndC;
     private JTextArea Que;
 
+
     public GUI(String title)
     {
         super(title);
         Que.setRows(10);
 
-        ArrayList<JRadioButton> Array = new ArrayList<>();
-        Array.add(C_LOOK);
-        Array.add(LOOK);
-        Array.add(Scan);
-        Array.add(C_Scan);
-        Array.add(FCFS);
-        Array.add(SSTF);
-        Array.add(OPTIMIZED);
+        ArrayList<JRadioButton> Algorithms = new ArrayList<>();
+        Algorithms.add(C_LOOK);
+        Algorithms.add(LOOK);
+        Algorithms.add(Scan);
+        Algorithms.add(C_Scan);
+        Algorithms.add(FCFS);
+        Algorithms.add(SSTF);
+        Algorithms.add(OPTIMIZED);
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
@@ -54,7 +104,7 @@ public class GUI extends JFrame {
             {
                 Text = Que.getText();
                 String[] s = Text.split("\n");
-                for (JRadioButton Radio : Array)
+                for (JRadioButton Radio : Algorithms)
                 {
                     ArrayList<Integer> queue = new ArrayList<>();
                     for (String value : s)
@@ -79,6 +129,11 @@ public class GUI extends JFrame {
                                     }
                                     obj.Calculate();
                                     obj.display();
+
+                                    DrawChart chart = new DrawChart("Algorithms Chart" ,obj.sequences ,"C-LOOK Algorithm");
+                                    chart.pack();
+                                    RefineryUtilities.centerFrameOnScreen(chart);
+                                    chart.setVisible(true);
                                 }
                                 break;
                             }
@@ -97,6 +152,11 @@ public class GUI extends JFrame {
                                     }
                                     obj.Calculate();
                                     obj.display();
+
+                                    DrawChart chart = new DrawChart("Algorithms Chart" ,obj.sequences ,"LOOK Algorithm");
+                                    chart.pack();
+                                    RefineryUtilities.centerFrameOnScreen(chart);
+                                    chart.setVisible(true);
                                 }
                                 break;
                             }
@@ -115,6 +175,11 @@ public class GUI extends JFrame {
                                     }
                                     obj.Calculate();
                                     obj.display();
+
+                                    DrawChart chart = new DrawChart("Algorithms Chart" ,obj.sequences ,"Scan Algorithm");
+                                    chart.pack();
+                                    RefineryUtilities.centerFrameOnScreen(chart);
+                                    chart.setVisible(true);
                                 }
                                 break;
                             }
@@ -133,6 +198,11 @@ public class GUI extends JFrame {
                                     }
                                     obj.Calculate();
                                     obj.display();
+
+                                    DrawChart chart = new DrawChart("Algorithms Chart" ,obj.sequences ,"C-Scan Algorithm");
+                                    chart.pack();
+                                    RefineryUtilities.centerFrameOnScreen(chart);
+                                    chart.setVisible(true);
                                 }
                                 break;
                             }
@@ -149,6 +219,11 @@ public class GUI extends JFrame {
                                 OPTIMIZED obj = new OPTIMIZED(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), queue);
                                 obj.Calculate();
                                 obj.display();
+
+                                DrawChart chart = new DrawChart("Algorithms Chart" ,obj.sequences ,"OPTIMIZED Algorithm");
+                                chart.pack();
+                                RefineryUtilities.centerFrameOnScreen(chart);
+                                chart.setVisible(true);
                                 break;
                             }
                             default:
@@ -159,9 +234,10 @@ public class GUI extends JFrame {
             }
         });
     }
+
     public static void main(String[] args)
     {
-        JFrame j = new GUI("Disk Scheduling Algorithms");
-        j.setVisible(true);
+        JFrame Frame = new GUI("Disk Scheduling Algorithms");
+        Frame.setVisible(true);
     }
 }
