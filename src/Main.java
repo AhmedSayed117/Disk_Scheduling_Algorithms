@@ -10,7 +10,7 @@ public class Main {
         queue.add(24);
         queue.add(16);
         queue.add(190);
-        LOOK scanAlgorithm = new LOOK(0,199,50,false,queue);
+        C_LOOK scanAlgorithm = new C_LOOK(0,199,50,false,queue);
         scanAlgorithm.Calculate();
         scanAlgorithm.display();
     }
