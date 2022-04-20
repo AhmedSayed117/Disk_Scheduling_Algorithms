@@ -3,8 +3,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class GUI extends JFrame{
+public class GUI extends JFrame {
     private JPanel MainPanel;
+    public String Text;
     private JLabel FirstLabel;
     private JPanel SecondPanel;
     private JRadioButton C_LOOK;
@@ -27,9 +28,12 @@ public class GUI extends JFrame{
     private JTextField FieldLook;
     private JFormattedTextField StartC;
     private JFormattedTextField EndC;
+    private JTextArea Que;
 
-    public GUI(String title){
+    public GUI(String title)
+    {
         super(title);
+        Que.setRows(10);
 
         ArrayList<JRadioButton> Array = new ArrayList<>();
         Array.add(C_LOOK);
@@ -40,61 +44,96 @@ public class GUI extends JFrame{
         Array.add(SSTF);
         Array.add(OPTIMIZED);
 
-
-
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
         this.setContentPane(MainPanel);
         this.pack();
 
         CalculateButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                for (JRadioButton Radio : Array ) {
+            @Override public void actionPerformed(ActionEvent e)
+            {
+                Text = Que.getText();
+                String[] s = Text.split("\n");
+                for (JRadioButton Radio : Array)
+                {
                     ArrayList<Integer> queue = new ArrayList<>();
-                    queue.add(82);
-                    queue.add(170);
-                    queue.add(43);
-                    queue.add(140);
-                    queue.add(24);
-                    queue.add(16);
-                    queue.add(190);
+                    for (String value : s)
+                        queue.add(Integer.parseInt(value));
 
-                    if (Radio.isSelected()){
-                        switch (Radio.getText()){
+                    if (Radio.isSelected())
+                    {
+                        switch (Radio.getText())
+                        {
                             case "C-LOOK":
                             {
-//                                C_LOOK obj = new C_LOOK(0,199,,queue);
-//                                obj.Calculate();
-//                                obj.display();
+                                if (!FieldC_Look.getText().equals(""))
+                                {
+                                    C_LOOK obj;
+                                    if (CheckC_Look.getModel().getSelectedItem() == "Right")
+                                    {
+                                        obj = new C_LOOK(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), Integer.parseInt(FieldC_Look.getText()), true, queue);
+                                    }
+                                    else
+                                    {
+                                        obj = new C_LOOK(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), Integer.parseInt(FieldC_Look.getText()), false, queue);
+                                    }
+                                    obj.Calculate();
+                                    obj.display();
+                                }
                                 break;
                             }
                             case "LOOK":
                             {
-                                LOOK obj;
-                                if (CheckLook.getModel().getSelectedItem()=="Right"){
-                                    obj = new LOOK(Integer.parseInt(StartC.getText()),Integer.parseInt(EndC.getText()),Integer.parseInt(FieldLook.getText()),true,queue);
-                                }else {
-                                    obj = new LOOK(Integer.parseInt(StartC.getText()),Integer.parseInt(EndC.getText()),Integer.parseInt(FieldLook.getText()),false,queue);
+                                if (!FieldLook.getText().equals(""))
+                                {
+                                    LOOK obj;
+                                    if (CheckLook.getModel().getSelectedItem() == "Right")
+                                    {
+                                        obj = new LOOK(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), Integer.parseInt(FieldLook.getText()), true, queue);
+                                    }
+                                    else
+                                    {
+                                        obj = new LOOK(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), Integer.parseInt(FieldLook.getText()), false, queue);
+                                    }
+                                    obj.Calculate();
+                                    obj.display();
                                 }
-                                obj.Calculate();
-                                obj.display();
                                 break;
                             }
                             case "Scan":
                             {
-                                SCAN obj;
-                                if (CheckLook.getModel().getSelectedItem()=="Right"){
-                                    obj = new SCAN(Integer.parseInt(StartC.getText()),Integer.parseInt(EndC.getText()),Integer.parseInt(FieldLook.getText()),true,queue);
-                                }else {
-                                    obj = new SCAN(Integer.parseInt(StartC.getText()),Integer.parseInt(EndC.getText()),Integer.parseInt(FieldLook.getText()),false,queue);
+                                if (!FieldScan.getText().equals(""))
+                                {
+                                    SCAN obj;
+                                    if (CheckScan.getModel().getSelectedItem() == "Right")
+                                    {
+                                        obj = new SCAN(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), Integer.parseInt(FieldScan.getText()), true, queue);
+                                    }
+                                    else
+                                    {
+                                        obj = new SCAN(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), Integer.parseInt(FieldScan.getText()), false, queue);
+                                    }
+                                    obj.Calculate();
+                                    obj.display();
                                 }
-                                obj.Calculate();
-                                obj.display();
                                 break;
                             }
                             case "C-Scan":
                             {
+                                if (!FieldC_Scan.getText().equals(""))
+                                {
+                                    C_SCAN obj;
+                                    if (CheckC_Scan.getModel().getSelectedItem() == "Right")
+                                    {
+                                        obj = new C_SCAN(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), Integer.parseInt(FieldC_Scan.getText()), true, queue);
+                                    }
+                                    else
+                                    {
+                                        obj = new C_SCAN(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), Integer.parseInt(FieldC_Scan.getText()), false, queue);
+                                    }
+                                    obj.Calculate();
+                                    obj.display();
+                                }
                                 break;
                             }
                             case "FCFS":
@@ -107,18 +146,21 @@ public class GUI extends JFrame{
                             }
                             case "OPTIMIZED":
                             {
-                                OPTIMIZED obj = new OPTIMIZED(Integer.parseInt(StartC.getText()),Integer.parseInt(EndC.getText()),queue);
+                                OPTIMIZED obj = new OPTIMIZED(Integer.parseInt(StartC.getText()), Integer.parseInt(EndC.getText()), queue);
                                 obj.Calculate();
                                 obj.display();
                                 break;
-                            } default: break;
+                            }
+                            default:
+                                break;
                         }
                     }
                 }
             }
         });
     }
-    public static void main(String[]args){
+    public static void main(String[] args)
+    {
         JFrame j = new GUI("Disk Scheduling Algorithms");
         j.setVisible(true);
     }
