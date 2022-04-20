@@ -5,25 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89db5f43-c1ac-42b9-9961-5d5ddb641518" name="Changes" comment="SCAN + Structure">
-      <change afterPath="$PROJECT_DIR$/src/OPTIMIZED.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/C_LOOK.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/C_LOOK.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/C_SCAN.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/C_SCAN.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/FCFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/FCFS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/LOOK.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/LOOK.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/SCAN.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/SCAN.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/SSTF.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/SSTF.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/Scheduling.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Disk_Scheduling_Algorithms/Scheduling.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LOOK.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LOOK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LOOK.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/C_LOOK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/C_LOOK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/C_SCAN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/C_SCAN.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SCAN.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scheduling.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SCAN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SCAN.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Scheduling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scheduling.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
