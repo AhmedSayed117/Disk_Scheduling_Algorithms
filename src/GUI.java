@@ -16,6 +16,7 @@ import java.io.*;
 import org.jfree.chart.ChartUtilities;
 
 public class GUI extends JFrame{
+
     static class DataInformation {
         public DataInformation(Map<String,Integer> m) throws IOException {
                 final DefaultCategoryDataset dataset = new DefaultCategoryDataset();
@@ -156,7 +157,7 @@ public class GUI extends JFrame{
                                         System.out.println("C-LOOK Algorithm");
                                         obj.display();
 
-                                        DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "C-LOOK Algorithm");
+                                        DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "C-LOOK Algorithm" + " (" +obj.TotalMovement +")");
                                         chart.pack();
                                         RefineryUtilities.centerFrameOnScreen(chart);
                                         chart.setVisible(true);
@@ -181,7 +182,7 @@ public class GUI extends JFrame{
                                         System.out.println("LOOK Algorithm");
                                         obj.display();
 
-                                        DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "LOOK Algorithm");
+                                        DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "LOOK Algorithm"+ " (" +obj.TotalMovement +")");
                                         chart.pack();
                                         RefineryUtilities.centerFrameOnScreen(chart);
                                         chart.setVisible(true);
@@ -207,7 +208,7 @@ public class GUI extends JFrame{
                                         System.out.println("Scan Algorithm");
                                         obj.display();
 
-                                        DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "Scan Algorithm");
+                                        DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "Scan Algorithm"+ " (" +obj.TotalMovement +")");
                                         chart.pack();
                                         RefineryUtilities.centerFrameOnScreen(chart);
                                         chart.setVisible(true);
@@ -232,7 +233,7 @@ public class GUI extends JFrame{
                                         System.out.println("C-Scan Algorithm");
                                         obj.display();
 
-                                        DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "C-Scan Algorithm");
+                                        DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "C-Scan Algorithm"+ " (" +obj.TotalMovement +")");
                                         chart.pack();
                                         RefineryUtilities.centerFrameOnScreen(chart);
                                         chart.setVisible(true);
@@ -242,30 +243,34 @@ public class GUI extends JFrame{
                                 }
                                 case "FCFS":
                                 {
-                                    FCFS obj = new FCFS(Integer.parseInt(StartC.getText()),Integer.parseInt(EndC.getText()),Integer.parseInt(FieldFCFS.getText()),queue);
-                                    obj.Calculate();
-                                    System.out.println("FCFS Algorithm");
-                                    obj.display();
+                                    if (!FieldFCFS.getText().equals("")){
+                                        FCFS obj = new FCFS(Integer.parseInt(StartC.getText()),Integer.parseInt(EndC.getText()),Integer.parseInt(FieldFCFS.getText()),queue);
+                                        obj.Calculate();
+                                        System.out.println("FCFS Algorithm");
+                                        obj.display();
 
-                                    DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "FCFS Algorithm");
-                                    chart.pack();
-                                    RefineryUtilities.centerFrameOnScreen(chart);
-                                    chart.setVisible(true);
-                                    AllMovement.put("FCFS",obj.TotalMovement);
+                                        DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "FCFS Algorithm"+ " (" +obj.TotalMovement +")");
+                                        chart.pack();
+                                        RefineryUtilities.centerFrameOnScreen(chart);
+                                        chart.setVisible(true);
+                                        AllMovement.put("FCFS",obj.TotalMovement);
+                                    }
                                     break;
                                 }
                                 case "SSTF":
                                 {
-                                    SSTF obj = new SSTF(Integer.parseInt(StartC.getText()),Integer.parseInt(EndC.getText()),Integer.parseInt(FieldFCFS.getText()),queue);
-                                    obj.Calculate();
-                                    System.out.println("SSTF Algorithm");
-                                    obj.display();
+                                    if (!FieldSSTF.getText().equals("")){
+                                        SSTF obj = new SSTF(Integer.parseInt(StartC.getText()),Integer.parseInt(EndC.getText()),Integer.parseInt(FieldSSTF.getText()),queue);
+                                        obj.Calculate();
+                                        System.out.println("SSTF Algorithm");
+                                        obj.display();
 
-                                    DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "SSTF Algorithm");
-                                    chart.pack();
-                                    RefineryUtilities.centerFrameOnScreen(chart);
-                                    chart.setVisible(true);
-                                    AllMovement.put("SSTF",obj.TotalMovement);
+                                        DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "SSTF Algorithm"+ " (" +obj.TotalMovement +")");
+                                        chart.pack();
+                                        RefineryUtilities.centerFrameOnScreen(chart);
+                                        chart.setVisible(true);
+                                        AllMovement.put("SSTF",obj.TotalMovement);
+                                    }
                                     break;
                                 }
                                 case "OPTIMIZED":
@@ -275,7 +280,7 @@ public class GUI extends JFrame{
                                     System.out.println("OPTIMIZED Algorithm");
                                     obj.display();
 
-                                    DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "OPTIMIZED Algorithm");
+                                    DrawChart chart = new DrawChart("Algorithms Chart", obj.sequences, "OPTIMIZED Algorithm"+ " (" +obj.TotalMovement +")");
                                     chart.pack();
                                     RefineryUtilities.centerFrameOnScreen(chart);
                                     chart.setVisible(true);
