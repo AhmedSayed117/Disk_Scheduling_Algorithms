@@ -33,7 +33,6 @@ public class C_LOOK extends Scheduling{
                 }
             }
         }else{
-
             for(int j=indexOfHead-1;j>=0;j--){
                 if(HeadStart>queue.get(j)&&queue.get(0)!=garbageValue){
                     TotalMovement+= Math.abs(current - queue.get(j));

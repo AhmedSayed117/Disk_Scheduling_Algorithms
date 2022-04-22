@@ -108,6 +108,7 @@ public class GUI extends JFrame{
 
     public GUI(String title) {
         super(title);
+        this.setVisible(true);
         Que.setRows(10);
 
         ArrayList<JRadioButton> Algorithms = new ArrayList<>();
@@ -302,7 +303,6 @@ public class GUI extends JFrame{
         });
     }
     public static void main(String[] args) {
-        JFrame Frame = new GUI("Disk Scheduling Algorithms");
-        Frame.setVisible(true);
+       new GUI("Disk Scheduling Algorithms");
     }
 }

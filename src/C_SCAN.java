@@ -26,16 +26,18 @@ public class C_SCAN extends Scheduling{
                 indexOfEnd--;
             }
             //(Start=0,16,24,43,End=199)
-            TotalMovement+= Math.abs(queue.get(indexOfStart) - queue.get(indexOfEnd)); //199-0
-            sequences.add(queue.get(indexOfEnd));
+            if (queue.size()!=1){
+                TotalMovement+= Math.abs(queue.get(indexOfStart) - queue.get(indexOfEnd)); //199-0
+                sequences.add(queue.get(indexOfEnd));
+            }
             queue.remove(queue.get(indexOfEnd));
             //(Start=0,16,24,43)
-            for (int i=indexOfStart ;queue.size()!=1;){
+            for (int i=indexOfStart ;queue.size()!=1 && !queue.isEmpty();){
                 TotalMovement+= Math.abs(queue.get(i+1) - queue.get(i));
                 sequences.add(queue.get(i));
                 queue.remove(queue.get(i));
             }
-            sequences.add(queue.get(0));
+            if (!queue.isEmpty()) sequences.add(queue.get(0));
         }
         //case Direction = left
         else {//(Start = 0,16,24,43,50,82,140,170,190,199)
@@ -47,17 +49,19 @@ public class C_SCAN extends Scheduling{
             }
             //(Start=0,82,140,170,190,199)
             //indexOfStart = 0
-            TotalMovement+= Math.abs(queue.get(indexOfStart) - queue.get(indexOfEnd)); //199-0
-            sequences.add(queue.get(indexOfStart));
+            if (queue.size()!=1){
+                TotalMovement+= Math.abs(queue.get(indexOfStart) - queue.get(indexOfEnd)); //199-0
+                sequences.add(queue.get(indexOfStart));
+            }
             queue.remove(queue.get(indexOfStart));
             indexOfEnd--;
             //(82,140,170,190,199)
-            for (int i=indexOfEnd ;queue.size()!=1;i--){//(82)
+            for (int i=indexOfEnd ;queue.size()!=1 && !queue.isEmpty();i--){//(82)
                 TotalMovement+= Math.abs(queue.get(i-1) - queue.get(i));
                 sequences.add(queue.get(i));
                 queue.remove(queue.get(i));
             }
-            sequences.add(queue.get(0));
+            if (!queue.isEmpty())sequences.add(queue.get(0));
         }
     }
 }

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class SSTF extends Scheduling{
 
-    static class Visit {
+     static class Visit {
         int time = 0;
         boolean mark = false;
     }
