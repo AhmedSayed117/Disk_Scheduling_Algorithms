@@ -7,11 +7,8 @@ public class SCAN extends Scheduling {
         super(start, end, headPointer,Direction,queue);//Start - End - HeadPointer
     }
 
-
     public void Calculate(){
-
         queue.add(HeadStart);
-
         //case Direction = Right
         if (Direction){
             queue.add(End);
@@ -31,7 +28,6 @@ public class SCAN extends Scheduling {
                 queue.remove(queue.get(i));
             }
             sequences.add(queue.get(0));
-
         }
         //case Direction = false
         else {

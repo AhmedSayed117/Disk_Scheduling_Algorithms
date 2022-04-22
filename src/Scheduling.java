@@ -11,17 +11,20 @@ public class Scheduling {
         queue = q;
         sequences = new Vector<>();
     }
+
     public Scheduling(int s,int e,ArrayList<Integer> q) {
         Start =s;End=e;TotalMovement=0;
         queue = q;
         sequences = new Vector<>();
     }
+
     public Scheduling(int s,int e,int h,Boolean d,ArrayList<Integer> q) {
         Direction = d;
         Start =s;End=e;HeadStart=h;TotalMovement=0;
         queue = q;
         sequences = new Vector<>();
     }
+
     public void display(){
         System.out.println("Total Movement = " + TotalMovement);
         System.out.print("Sequence = < ");

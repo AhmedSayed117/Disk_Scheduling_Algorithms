@@ -2,12 +2,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class C_SCAN extends Scheduling{
+
     public C_SCAN(int start, int end, int headPointer, boolean Direction, ArrayList<Integer> queue) {
         super(start, end, headPointer,Direction,queue);//Start - End - HeadPointer
     }
 
     public void Calculate(){ //(start=0,16,24,43,50,82,140,170,190,End=199)
-
         queue.add(Start);
         queue.add(End);
         queue.add(HeadStart);
@@ -26,7 +26,6 @@ public class C_SCAN extends Scheduling{
                 indexOfEnd--;
             }
             //(Start=0,16,24,43,End=199)
-            //queue.size()-1 = indexOfEnd = 199
             TotalMovement+= Math.abs(queue.get(indexOfStart) - queue.get(indexOfEnd)); //199-0
             sequences.add(queue.get(indexOfEnd));
             queue.remove(queue.get(indexOfEnd));
@@ -38,11 +37,9 @@ public class C_SCAN extends Scheduling{
             }
             sequences.add(queue.get(0));
         }
-
         //case Direction = left
         else {//(Start = 0,16,24,43,50,82,140,170,190,199)
-
-            for (int i = indexOfHead ; i>indexOfStart ;i--) { //0,......
+            for (int i = indexOfHead ; i>indexOfStart ;i--) {
                 TotalMovement += Math.abs(queue.get(i - 1) - queue.get(i));
                 sequences.add(queue.get(i));
                 queue.remove(queue.get(i));

@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 import java.util.Collections;
-
+// it is Scan Algorithm but begin From (0) Not First Request and end of Last Request
 public class OPTIMIZED extends Scheduling{
+
     public OPTIMIZED(int start, int end, ArrayList<Integer> queue) {
         super(start, end,queue);
     }
